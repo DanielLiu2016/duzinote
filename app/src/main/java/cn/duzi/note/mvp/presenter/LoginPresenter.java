@@ -2,19 +2,18 @@ package cn.duzi.note.mvp.presenter;
 
 import android.app.Application;
 
-import com.jess.arms.integration.AppManager;
 import com.jess.arms.di.scope.ActivityScope;
-import com.jess.arms.mvp.BasePresenter;
 import com.jess.arms.http.imageloader.ImageLoader;
+import com.jess.arms.integration.AppManager;
+import com.jess.arms.mvp.BasePresenter;
 
 import java.util.logging.Handler;
 
-import cn.duzi.note.mvp.bean.UserBean;
-import me.jessyan.rxerrorhandler.core.RxErrorHandler;
-
 import javax.inject.Inject;
 
+import cn.duzi.note.mvp.bean.UserBean;
 import cn.duzi.note.mvp.contract.LoginContract;
+import me.jessyan.rxerrorhandler.core.RxErrorHandler;
 
 
 @ActivityScope

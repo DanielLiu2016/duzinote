@@ -193,24 +193,36 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     @Override
     public String getUsername() {
-        return null;
+        return mEmailView.getText().toString();
     }
 
     @Override
     public String getPassword() {
-        return null;
+        return mPasswordView.getText().toString();
     }
 
     @Override
     public void showLoading() {
-        showProgress(true);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                showProgress(true);
+            }
+        });
+
     }
 
 
 
     @Override
     public void hideLoading() {
-        showProgress(false);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                showProgress(false);
+            }
+        });
+
     }
 
     @Override
